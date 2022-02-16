@@ -3,6 +3,12 @@
 	import { Form, TextInput, PasswordInput, Button } from 'carbon-components-svelte';
 
 	import Login16 from 'carbon-icons-svelte/lib/Login16';
+	import { goto } from '$app/navigation';
+
+	function handleClick() {
+		console.log('Clicked!');
+		goto('/dashboard');
+	}
 </script>
 
 <div class="flex flex-col justify-center items-center h-screen space-y-5">
@@ -10,6 +16,6 @@
 	<Form class="space-y-5">
 		<TextInput labelText="User name" placeholder="Enter user name..." required />
 		<PasswordInput required type="password" labelText="Password" placeholder="Enter password..." />
-		<Button icon={Login16}>Log in</Button>
+		<Button icon={Login16} on:click={handleClick}>Log in</Button>
 	</Form>
 </div>

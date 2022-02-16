@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import '$lib/css/tailwindcss.css';
 	import 'carbon-components-svelte/css/g100.css';
 	import '$lib/css/app.css';
