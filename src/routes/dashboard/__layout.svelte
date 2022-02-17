@@ -15,6 +15,7 @@
 	import UserMultiple16 from 'carbon-icons-svelte/lib/UserMultiple16';
 	import UserIdentification20 from 'carbon-icons-svelte/lib/UserIdentification20';
 	import { TooltipIcon } from 'carbon-components-svelte';
+	import Topbar from '$lib/components/Topbar.svelte';
 	export let activePath;
 </script>
 
@@ -65,7 +66,8 @@
 			</a>
 		</div>
 	</div>
-	<div class="flex-grow p-10">
+	<div class="flex flex-col flex-grow p-10">
+		<Topbar />
 		<slot />
 	</div>
 </section>
