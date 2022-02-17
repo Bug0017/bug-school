@@ -2,6 +2,10 @@
 	import Login from '$lib/components/Login.svelte';
 </script>
 
+<svelte:head>
+	<title>Login</title>
+</svelte:head>
+
 <sectio class="flex flex-col sm:flex-row  min-h-screen w-screen">
 	<div class="w-1/2 bg-fuchsia-50 h-screen bg-image" />
 	<div class="w-1/2">

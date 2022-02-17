@@ -23,6 +23,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Students</title>
+</svelte:head>
+
 <section class="flex flex-col space-y-6">
 	<DataTable
 		sortable
