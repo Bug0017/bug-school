@@ -9,9 +9,8 @@
 
 	const mutation = useMutation((user) => loginUser(user), {
 		onSuccess: (context) => {
-			console.log(context);
-			debugger;
 			goto('/dashboard');
+			window.location.reload();
 		},
 		onError: (error) => {
 			console.log(error);

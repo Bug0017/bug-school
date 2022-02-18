@@ -1,3 +1,17 @@
+<script context="module">
+	export async function load({ session }) {
+		console.log(session.body.session);
+
+		if (session.body.session) {
+			return {
+				status: 302,
+				redirect: '/dashboard'
+			};
+		}
+		return {};
+	}
+</script>
+
 <script>
 	import Login from '$lib/components/Login.svelte';
 </script>

@@ -1,5 +1,5 @@
 <script context="module">
-	export async function load({ params: { studentId } }) {
+	export async function load({ params: { studentId }, session }) {
 		return {
 			props: {
 				studentId

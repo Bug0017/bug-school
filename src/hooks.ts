@@ -5,14 +5,15 @@ export async function handle({ event, resolve }) {
 	const cookieId = event.request.headers.get('cookie');
 	if (cookieId) {
 		event.locals.user = await getUserInformation(cookie.parse(cookieId).sessionId);
+	} else {
+		event.locals.user = null;
 	}
 	const response = await resolve(event);
 	return response;
 }
 
 export const getSession = (request) => {
-	const session = request.locals?.user?.session;
-
+	const session = request.locals?.user;
 	if (!session) {
 		return {
 			status: 302,

@@ -22,5 +22,5 @@
 <svelte:head>
 	<title>Dashboard</title>
 </svelte:head>
-
+{JSON.stringify(session)}
 <h3>dashboard</h3>

@@ -8,7 +8,7 @@ export async function post({ request }) {
 	const password = await data.get('password');
 	// @ts-ignore
 	const user = await prisma.user.findUnique({ where: { username } });
-
+	console.log(user);
 	if (!user) {
 		return {
 			status: 401,
@@ -38,11 +38,10 @@ export async function post({ request }) {
 		}
 	});
 
-	console.log(session);
 	return {
 		headers: {
 			'Set-Cookie': cookie.serialize('sessionId', sessionId, {
-				httpOnly: true,
+				httpOnly: false,
 				maxAge: 60 * 60 * 24 * 7,
 				path: '/',
 				sameSite: 'lax'
