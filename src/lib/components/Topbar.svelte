@@ -16,7 +16,7 @@
 				on:click={async () => {
 					await logout({
 						// @ts-ignore
-						sessionId: $session.body.session.session.id
+						sessionId: $session.body.session.id
 					});
 					document.cookie = 'sessionId' + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 					window.location.reload();

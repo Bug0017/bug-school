@@ -28,7 +28,7 @@ export const getSession = (request) => {
 	return {
 		status: 200,
 		body: {
-			session
+			...session
 		}
 	};
 };
